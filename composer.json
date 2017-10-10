@@ -1,0 +1,15 @@
+{
+    "require": {
+        "artyomderyavka/fast-micro-kernel": "dev-master",
+        "artyomderyavka/target": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Delivery\\Controllers\\" : "controllers/"
+        }
+    },
+    "classmap": [
+        "controllers"
+    ],
+    "minimum-stability": "dev"
+}

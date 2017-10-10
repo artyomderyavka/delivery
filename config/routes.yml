@@ -1,0 +1,9 @@
+main:
+  method: GET
+  route: /delivery/getIframe
+  handle:
+    controller: Delivery\Controllers\Delivery
+    action: getIFrame
+    before:
+      middlware: testMiddlware
+      delegate: testDelegate
