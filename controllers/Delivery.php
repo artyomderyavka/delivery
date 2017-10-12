@@ -4,13 +4,21 @@
 namespace Delivery\Controllers;
 
 
+use FastMicroKernel\Components\Controller;
+use Delivery\Infrastructure\DeliveryContext\Factories\DeliveryServiceDtoFactory;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 
-class Delivery
+class Delivery extends Controller
 {
     public function getIFrame(RequestInterface $request, array $arguments): ResponseInterface
     {
-        echo "<pre>"; var_dump('in controller', $request->getQueryParams()); die;
+        echo "<pre>"; var_dump('in controller', $request->getQueryParams());
+        $queryParams = $request->getQueryParams();
+        $factory = new DeliveryServiceDtoFactory();
+        $deliveryRequestDto = $factory->getDeliveryRequestDto($queryParams);
+        $deliveryResponseDto = $this->getContainer()->get('DeliveryService')->getIFrame($deliveryRequestDto);
+        var_dump($deliveryRequestDto, $deliveryResponseDto);
+        die;
     }
 }

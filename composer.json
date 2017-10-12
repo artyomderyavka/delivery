@@ -5,11 +5,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Delivery\\Controllers\\" : "controllers/"
+            "Delivery\\Controllers\\" : "controllers/",
+            "Delivery\\Infrastructure\\DeliveryContext\\Factories\\" : "infrastructure/deliveryContext/factories/",
+            "Delivery\\Infrastructure\\DeliveryContext\\Dto\\" : "infrastructure/deliveryContext/dto/",
+            "Delivery\\Domain\\DeliveryContext\\Dto\\" : "domain/deliveryContext/dto/",
+            "Delivery\\Domain\\DeliveryContext\\Dto\\Interfaces\\" : "domain/deliveryContext/dto/interfaces/",
+            "Delivery\\Domain\\DeliveryContext\\Services\\" : "domain/deliveryContext/services/"
         }
     },
     "classmap": [
-        "controllers"
+        "controllers",
+        "infrastructure/deliveryContext/factories",
+        "infrastructure/deliveryContext/dto",
+        "domain/deliveryContext/dto",
+        "domain/deliveryContext/dto/interfaces",
+        "domain/deliveryContext/services"
     ],
     "minimum-stability": "dev"
 }
