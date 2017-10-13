@@ -6,7 +6,7 @@ if (TARGET_SERVICE_CLIENT_TRANSPORT === 'local') {
 $cachedContainerFile = $projectDir . DI_CONTAINER_CACHE_FILE;
 //@todo - add checking of included configuration. Throw invalid configuration exception on error
 //@todo - move container building into kernel
-if (file_exists($cachedContainerFile)) {
+if (false && file_exists($cachedContainerFile)) { //TMP
     require_once $cachedContainerFile;
     $container = new ProjectServiceContainer();
 } else {

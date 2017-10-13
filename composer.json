@@ -5,18 +5,20 @@
     },
     "autoload": {
         "psr-4": {
-            "Delivery\\Controllers\\" : "controllers/",
-            "Delivery\\Infrastructure\\DeliveryContext\\Factories\\" : "infrastructure/deliveryContext/factories/",
-            "Delivery\\Infrastructure\\DeliveryContext\\Dto\\" : "infrastructure/deliveryContext/dto/",
+            "Delivery\\Controllers\\" : "application/controllers/",
+            "Delivery\\Factories\\" : "application/factories/",
+            "Delivery\\Factories\\Interfaces\\" : "application/factories/interfaces",
+            "Delivery\\Dto\\" : "application/dto/",
             "Delivery\\Domain\\DeliveryContext\\Dto\\" : "domain/deliveryContext/dto/",
             "Delivery\\Domain\\DeliveryContext\\Dto\\Interfaces\\" : "domain/deliveryContext/dto/interfaces/",
             "Delivery\\Domain\\DeliveryContext\\Services\\" : "domain/deliveryContext/services/"
         }
     },
     "classmap": [
-        "controllers",
-        "infrastructure/deliveryContext/factories",
-        "infrastructure/deliveryContext/dto",
+        "application/controllers",
+        "application/factories",
+        "application/factories/interfaces",
+        "application/dto",
         "domain/deliveryContext/dto",
         "domain/deliveryContext/dto/interfaces",
         "domain/deliveryContext/services"

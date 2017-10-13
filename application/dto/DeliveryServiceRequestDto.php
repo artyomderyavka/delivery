@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Delivery\Infrastructure\DeliveryContext\Dto;
+namespace Delivery\Dto;
 
 
 use Delivery\Domain\DeliveryContext\Dto\Interfaces\DeliveryRequestDtoInterface;
 
-class DeliveryRequestDto implements DeliveryRequestDtoInterface
+class DeliveryServiceRequestDto implements DeliveryRequestDtoInterface
 {
     protected $sourceSiteId;
     protected $placement;

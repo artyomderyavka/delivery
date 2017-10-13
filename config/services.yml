@@ -19,6 +19,10 @@ services:
 #      - '@contentServiceClient'
 #      - '@serviceRequestBuilder'
 
+##### delivery dto factory
+  DeliveryServiceRequestDtoFactory:
+    class: Delivery\Factories\DeliveryServiceRequestDtoFactory
+
 ##### middleware
   testMiddlware:
     class: FastMicroKernel\Components\Test

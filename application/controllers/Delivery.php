@@ -16,7 +16,7 @@ class Delivery extends Controller
         echo "<pre>";
         var_dump('queryParams', $request->getQueryParams());
         $queryParams = $request->getQueryParams();
-        $deliveryRequestDto = $this->getContainer()->get('DeliveryServiceDtoFactory')->getDeliveryRequestDto($queryParams);
+        $deliveryRequestDto = $this->getContainer()->get('DeliveryServiceRequestDtoFactory')->getDeliveryRequestDto($queryParams);
         $deliveryResponseDto = $this->getContainer()->get('DeliveryService')->getIFrame($deliveryRequestDto);
         die;
     }

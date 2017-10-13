@@ -4,12 +4,12 @@
 namespace Delivery\Domain\DeliveryContext\Services;
 
 
-use Delivery\Infrastructure\DeliveryContext\Dto\DeliveryRequestDto;
+use Delivery\Dto\DeliveryServiceRequestDto;
 
 class Delivery
 {
-    public function getIFrame(DeliveryRequestDto $deliveryRequestDto)
+    public function getIFrame(DeliveryServiceRequestDto $deliveryRequestDto)
     {
-        return "response";
+        var_dump('$deliveryRequestDto', $deliveryRequestDto);
     }
 }
