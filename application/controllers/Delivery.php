@@ -14,10 +14,13 @@ class Delivery extends Controller
     public function getIFrame(RequestInterface $request, array $arguments): ResponseInterface
     {
         echo "<pre>";
-        var_dump('queryParams', $request->getQueryParams());
+        //var_dump('queryParams', $request->getQueryParams());
         $queryParams = $request->getQueryParams();
-        $deliveryRequestDto = $this->getContainer()->get('DeliveryServiceRequestDtoFactory')->getDeliveryRequestDto($queryParams);
+        $deliveryRequestDto = $this->getContainer()->get('DeliveryServiceRequestDtoFactory')
+            ->getDeliveryRequestDto($queryParams);
         $deliveryResponseDto = $this->getContainer()->get('DeliveryService')->getIFrame($deliveryRequestDto);
-        die;
+        //var_dump($deliveryRequestDto, $deliveryResponseDto);
+
+        return $this->buildHtmlResponse('200', $deliveryResponseDto->getRenderedContent());
     }
 }

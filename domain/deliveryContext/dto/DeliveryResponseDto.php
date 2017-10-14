@@ -18,6 +18,14 @@ class DeliveryResponseDto implements DeliveryResponseDtoInterface
     protected $elementIds;
     protected $renderedContent;
 
+    public function __construct(array $deliveryResponseData)
+    {
+        $this->elementIds = !empty($deliveryResponseData['elementIds']) ? $deliveryResponseData['elementIds'] : [];
+        $this->placementId = !empty($deliveryResponseData['placementId']) ? $deliveryResponseData['placementId'] : '';
+        $this->renderedContent = !empty($deliveryResponseData['renderedContent']) ? $deliveryResponseData['renderedContent'] : '';
+        $this->templateId = !empty($deliveryResponseData['templateId']) ? $deliveryResponseData['templateId'] : '';
+    }
+
     public function getElementIds(): array
     {
         return $this->elementIds;

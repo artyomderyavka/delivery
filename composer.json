@@ -9,9 +9,15 @@
             "Delivery\\Factories\\" : "application/factories/",
             "Delivery\\Factories\\Interfaces\\" : "application/factories/interfaces",
             "Delivery\\Dto\\" : "application/dto/",
+            "Delivery\\Domain\\DeliveryContext\\Services\\" : "domain/deliveryContext/services/",
             "Delivery\\Domain\\DeliveryContext\\Dto\\" : "domain/deliveryContext/dto/",
             "Delivery\\Domain\\DeliveryContext\\Dto\\Interfaces\\" : "domain/deliveryContext/dto/interfaces/",
-            "Delivery\\Domain\\DeliveryContext\\Services\\" : "domain/deliveryContext/services/"
+            "Delivery\\Domain\\DeliveryContext\\Factories\\" : "domain/deliveryContext/factories/",
+            "Delivery\\Domain\\DeliveryContext\\Factories\\Interfaces\\" : "domain/deliveryContext/factories/interfaces/",
+            "Delivery\\Domain\\DeliveryContext\\Collections\\" : "domain/deliveryContext/collections/",
+            "Delivery\\Domain\\DeliveryContext\\Collections\\Interfaces\\" : "domain/deliveryContext/collections/interfaces/",
+            "Delivery\\Domain\\DeliveryContext\\ValueObjects\\" : "domain/deliveryContext/valueObjects/",
+            "Delivery\\Domain\\DeliveryContext\\ValueObjects\\Interfaces\\" : "domain/deliveryContext/valueObjects/interfaces/"
         }
     },
     "classmap": [
@@ -19,9 +25,15 @@
         "application/factories",
         "application/factories/interfaces",
         "application/dto",
+        "domain/deliveryContext/services",
         "domain/deliveryContext/dto",
         "domain/deliveryContext/dto/interfaces",
-        "domain/deliveryContext/services"
+        "domain/deliveryContext/factories",
+        "domain/deliveryContext/factories/interfaces",
+        "domain/deliveryContext/collections",
+        "domain/deliveryContext/collections/interfaces",
+        "domain/deliveryContext/valueObjects",
+        "domain/deliveryContext/valueObjects/interfaces"
     ],
     "minimum-stability": "dev"
 }
