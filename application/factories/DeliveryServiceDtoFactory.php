@@ -5,13 +5,14 @@ namespace Delivery\Factories;
 
 
 use Delivery\Domain\DeliveryContext\Dto\Interfaces\DeliveryRequestDtoInterface;
-use Delivery\Dto\DeliveryRequestDto;
+use Delivery\Dto\DeliveryServiceRequestDto;
+use Delivery\Factories\Interfaces\DeliveryServiceDtoFactoryInterface;
 
 
-class DeliveryServiceDtoFactory
+class DeliveryServiceDtoFactory implements DeliveryServiceDtoFactoryInterface
 {
-    public function getDeliveryRequestDto(array $queryParams): DeliveryRequestDtoInterface
+    public function getDeliveryRequestDto(array $deliveryRequestData): DeliveryRequestDtoInterface
     {
-        return new DeliveryRequestDto($queryParams);
+        return new DeliveryServiceRequestDto($deliveryRequestData);
     }
 }

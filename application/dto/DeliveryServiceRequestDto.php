@@ -24,26 +24,25 @@ class DeliveryServiceRequestDto implements DeliveryRequestDtoInterface
     protected $scammerStatus;
     protected $blacklistStatus;
 
-    public function __construct(array $queryParams)
+    public function __construct(array $deliveryRequestData)
     {
-        $this->sourceSiteId = !empty($queryParams['sourceSite']) ? (string)$queryParams['sourceSite'] : '';
-        $this->placement = !empty($queryParams['placement']) ? (string)$queryParams['placement'] : '';
-        $this->trafficChannel = !empty($queryParams['trafficChannel']) ? (string)$queryParams['trafficChannel'] : '';
-        $this->country = !empty($queryParams['country']) ? (string)$queryParams['country'] : '';
-        $this->platform = !empty($queryParams['platform']) ? (string)$queryParams['platform'] : '';
-        $this->language = !empty($queryParams['language']) ? (string)$queryParams['language'] : '';
-        $this->gender = !empty($queryParams['gender']) ? (string)$queryParams['gender'] : '';
-        $this->orientation = !empty($queryParams['orientation']) ? (string)$queryParams['orientation'] : '';
-        $this->safeParam = !empty($queryParams['safeParam']) ? (string)$queryParams['safeParam'] : '';
-        $this->paymentStatus = !empty($queryParams['paymentStatus']) ? (string)$queryParams['paymentStatus'] : '';
-        $this->needTarget = !empty($queryParams['needTarget']) ? (bool)$queryParams['needTarget'] : false;
-        $this->scammerStatus = !empty($queryParams['scammerStatus']) ? (bool)$queryParams['scammerStatus'] : false;
-        $this->blacklistStatus = !empty($queryParams['blacklistStatus']) ? (bool)$queryParams['blacklistStatus'] : false;
-        $this->alreadyRegisteredOnSiteIds = !empty($queryParams['alreadyRegisteredOnSites'])
-            ? explode(';', $queryParams['alreadyRegisteredOnSites']) : [];
-        $this->allowedToRewriteSiteIds = !empty($queryParams['allowedToRewriteSites'])
-            ? explode(';', $queryParams['allowedToRewriteSites']) : [];
-
+        $this->sourceSiteId = !empty($deliveryRequestData['sourceSite']) ? (string)$deliveryRequestData['sourceSite'] : '';
+        $this->placement = !empty($deliveryRequestData['placement']) ? (string)$deliveryRequestData['placement'] : '';
+        $this->trafficChannel = !empty($deliveryRequestData['trafficChannel']) ? (string)$deliveryRequestData['trafficChannel'] : '';
+        $this->country = !empty($deliveryRequestData['country']) ? (string)$deliveryRequestData['country'] : '';
+        $this->platform = !empty($deliveryRequestData['platform']) ? (string)$deliveryRequestData['platform'] : '';
+        $this->language = !empty($deliveryRequestData['language']) ? (string)$deliveryRequestData['language'] : '';
+        $this->gender = !empty($deliveryRequestData['gender']) ? (string)$deliveryRequestData['gender'] : '';
+        $this->orientation = !empty($deliveryRequestData['orientation']) ? (string)$deliveryRequestData['orientation'] : '';
+        $this->safeParam = !empty($deliveryRequestData['safeParam']) ? (string)$deliveryRequestData['safeParam'] : '';
+        $this->paymentStatus = !empty($deliveryRequestData['paymentStatus']) ? (string)$deliveryRequestData['paymentStatus'] : '';
+        $this->needTarget = !empty($deliveryRequestData['needTarget']) ? (bool)$deliveryRequestData['needTarget'] : false;
+        $this->scammerStatus = !empty($deliveryRequestData['scammerStatus']) ? (bool)$deliveryRequestData['scammerStatus'] : false;
+        $this->blacklistStatus = !empty($deliveryRequestData['blacklistStatus']) ? (bool)$deliveryRequestData['blacklistStatus'] : false;
+        $this->alreadyRegisteredOnSiteIds = !empty($deliveryRequestData['alreadyRegisteredOnSites'])
+            ? explode(';', $deliveryRequestData['alreadyRegisteredOnSites']) : [];
+        $this->allowedToRewriteSiteIds = !empty($deliveryRequestData['allowedToRewriteSites'])
+            ? explode(';', $deliveryRequestData['allowedToRewriteSites']) : [];
     }
 
     public function getAllowedToRewriteSiteIds(): array

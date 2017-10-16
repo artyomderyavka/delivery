@@ -11,17 +11,30 @@ services:
   serviceRequestBuilder:
     class: FastMicroKernel\Components\ServiceRequestBuilder
 
-##### delivery micro-service
-  DeliveryService:
-    class: Delivery\Domain\DeliveryContext\Services\Delivery
-#    arguments:
+##### domain delivery context factories
+  domainDeliveryContextValueObjectsFactory:
+    class: Delivery\Domain\DeliveryContext\Factories\ValueObjectsFactory
+
+  domainDeliveryContextDtoFactory:
+    class: Delivery\Domain\DeliveryContext\Factories\DtoFactory
+
+  domainDeliveryContextCollectionsFactory:
+    class: Delivery\Domain\DeliveryContext\Factories\CollectionsFactory
+
+##### domain delivery context services
+  deliveryService:
+    class: Delivery\Domain\DeliveryContext\Services\DeliveryService
+    arguments:
+      - '@domainDeliveryContextValueObjectsFactory'
+      - '@domainDeliveryContextDtoFactory'
+      - '@domainDeliveryContextCollectionsFactory'
 #      - '@targetServiceClient'
 #      - '@contentServiceClient'
 #      - '@serviceRequestBuilder'
 
-##### delivery dto factory
-  DeliveryServiceRequestDtoFactory:
-    class: Delivery\Factories\DeliveryServiceRequestDtoFactory
+##### application factories
+  deliveryServiceDtoFactory:
+    class: Delivery\Factories\DeliveryServiceDtoFactory
 
 ##### middleware
   testMiddlware:

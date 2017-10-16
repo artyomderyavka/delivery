@@ -11,9 +11,9 @@ namespace Delivery\Domain\DeliveryContext\Factories;
 
 use Delivery\Domain\DeliveryContext\Dto\DeliveryResponseDto;
 use Delivery\Domain\DeliveryContext\Dto\Interfaces\DeliveryResponseDtoInterface;
-use Delivery\Domain\DeliveryContext\Factories\Interfaces\DeliveryResponseDtoFactoryInterface;
+use Delivery\Domain\DeliveryContext\Factories\Interfaces\DtoFactoryInterface;
 
-class DeliveryResponseDtoFactory implements DeliveryResponseDtoFactoryInterface
+class DtoFactory implements DtoFactoryInterface
 {
     public function getDeliveryResponseDto(array $deliveryResponseData): DeliveryResponseDtoInterface
     {
